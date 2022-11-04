@@ -13,15 +13,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap">
 <script src="/js/bot.js"></script><title data-react-helmet="true">Understanding how chat search works | yellow.ai</title><meta data-react-helmet="true" property="og:image" content="https://docs.yellow.ai/img/og_img.png"><meta data-react-helmet="true" name="twitter:image" content="https://docs.yellow.ai/img/og_img.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for yellow.ai"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" property="og:title" content="Understanding how chat search works | yellow.ai"><meta data-react-helmet="true" name="description" content="This document explains how the search works in the chats section when an agent or an admin desires to look into a particular chat for more information about the user, how the chat started, what was the bot user looking for, etc."><meta data-react-helmet="true" property="og:description" content="This document explains how the search works in the chats section when an agent or an admin desires to look into a particular chat for more information about the user, how the chat started, what was the bot user looking for, etc."><meta data-react-helmet="true" property="og:url" content="https://docs.yellow.ai/docs/platform_concepts/inbox/chats/chatsearch"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.png"><link data-react-helmet="true" rel="preconnect" href="https://LWOORM11IH-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://docs.yellow.ai/docs/platform_concepts/inbox/chats/chatsearch"><link rel="stylesheet" href="/styles.573f9441.css">
-<link rel="preload" href="/styles.161a4d9a.js" as="script">
-<link rel="preload" href="/runtime~main.6e21399c.js" as="script">
-<link rel="preload" href="/main.0dda8339.js" as="script">
-<link rel="preload" href="/1.e94311e7.js" as="script">
-<link rel="preload" href="/b1f81d43.24a8a277.js" as="script">
-<link rel="preload" href="/365.a3379958.js" as="script">
-<link rel="preload" href="/935f2afb.7d44d4f7.js" as="script">
-<link rel="preload" href="/363.2bc0c12a.js" as="script">
-<link rel="preload" href="/b6e312e3.c738da3c.js" as="script">
+<link rel="preload" href="/styles.816337a2.js" as="script">
+<link rel="preload" href="/runtime~main.00e4221c.js" as="script">
+<link rel="preload" href="/main.8b844d53.js" as="script">
+<link rel="preload" href="/1.35ce1bbd.js" as="script">
+<link rel="preload" href="/b1f81d43.6b700e3d.js" as="script">
+<link rel="preload" href="/366.0e943024.js" as="script">
+<link rel="preload" href="/935f2afb.3ddf0793.js" as="script">
+<link rel="preload" href="/364.5cd2091e.js" as="script">
+<link rel="preload" href="/b6e312e3.ef8ed470.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -32,14 +32,14 @@ For example, Description, Ticket Id, Note, etc.</p><ol><li><p>Hovering over the 
 Ideally, a ticket would not have 1000s of messages in it. </p><p><strong>Look out for</strong>:
 Count of instances where the ticket has a large no. of messages
 Increased loading time to product search results</p></div></div><p><img src="https://i.imgur.com/YzV8X1r.png"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/platform_concepts/inbox/chats/chatscreen"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Chat screen, user details, and bulk actions</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/platform_concepts/inbox/chats/whatsapp-24hr-window-policy"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">WhatsApp 24hr Window Policy »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_2xL- thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-search-chats" class="table-of-contents__link"><a name="search"></a> 1. Search chats</a><ul><li><a href="#11-details-search" class="table-of-contents__link">1.1 Details search</a></li><li><a href="#12-message-search" class="table-of-contents__link">1.2 Message search</a></li></ul></li><li><a href="#2-filter-chats" class="table-of-contents__link"><a name="filter"></a> 2. Filter chats</a><ul><li><a href="#21-search-details" class="table-of-contents__link">2.1 Search details</a></li></ul></li><li><a href="#3-tradeoffs" class="table-of-contents__link">3. Tradeoffs</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="footer__bottom text--center"></div></div></footer></div>
-<script src="/styles.161a4d9a.js"></script>
-<script src="/runtime~main.6e21399c.js"></script>
-<script src="/main.0dda8339.js"></script>
-<script src="/1.e94311e7.js"></script>
-<script src="/b1f81d43.24a8a277.js"></script>
-<script src="/365.a3379958.js"></script>
-<script src="/935f2afb.7d44d4f7.js"></script>
-<script src="/363.2bc0c12a.js"></script>
-<script src="/b6e312e3.c738da3c.js"></script>
+<script src="/styles.816337a2.js"></script>
+<script src="/runtime~main.00e4221c.js"></script>
+<script src="/main.8b844d53.js"></script>
+<script src="/1.35ce1bbd.js"></script>
+<script src="/b1f81d43.6b700e3d.js"></script>
+<script src="/366.0e943024.js"></script>
+<script src="/935f2afb.3ddf0793.js"></script>
+<script src="/364.5cd2091e.js"></script>
+<script src="/b6e312e3.ef8ed470.js"></script>
 </body>
 </html>
