@@ -14,15 +14,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap">
 <script src="/js/FeedbackFooter.js"></script>
 <script src="/js/bot.js"></script><title data-react-helmet="true">User inactivity | yellow.ai</title><meta data-react-helmet="true" property="og:image" content="https://docs.yellow.ai/img/og_img.png"><meta data-react-helmet="true" name="twitter:image" content="https://docs.yellow.ai/img/og_img.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for yellow.ai"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" property="og:title" content="User inactivity | yellow.ai"><meta data-react-helmet="true" name="description" content="Sometimes, when a user is asked for an input, we might not get a response and would like to nudge them to share a response, otherwise the bot flow cannot move forward."><meta data-react-helmet="true" property="og:description" content="Sometimes, when a user is asked for an input, we might not get a response and would like to nudge them to share a response, otherwise the bot flow cannot move forward."><meta data-react-helmet="true" property="og:url" content="https://docs.yellow.ai/docs/platform_concepts/studio/events/user-inactive"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.png"><link data-react-helmet="true" rel="preconnect" href="https://LWOORM11IH-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://docs.yellow.ai/docs/platform_concepts/studio/events/user-inactive"><link rel="stylesheet" href="/styles.dff9e85e.css">
-<link rel="preload" href="/styles.029d2b2d.js" as="script">
-<link rel="preload" href="/runtime~main.90a440b0.js" as="script">
-<link rel="preload" href="/main.bae1b80d.js" as="script">
-<link rel="preload" href="/1.49225107.js" as="script">
-<link rel="preload" href="/b1f81d43.80fe0da0.js" as="script">
-<link rel="preload" href="/377.4d7f498f.js" as="script">
-<link rel="preload" href="/935f2afb.526ee2f8.js" as="script">
-<link rel="preload" href="/375.83b63a3c.js" as="script">
-<link rel="preload" href="/9656d109.c849c738.js" as="script">
+<link rel="preload" href="/styles.edef4358.js" as="script">
+<link rel="preload" href="/runtime~main.57858f95.js" as="script">
+<link rel="preload" href="/main.c0b6927f.js" as="script">
+<link rel="preload" href="/1.cad42726.js" as="script">
+<link rel="preload" href="/b1f81d43.c00b4450.js" as="script">
+<link rel="preload" href="/378.c1f3cdf7.js" as="script">
+<link rel="preload" href="/935f2afb.be9e5253.js" as="script">
+<link rel="preload" href="/376.465e114f.js" as="script">
+<link rel="preload" href="/9656d109.41ed8ee4.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -30,14 +30,14 @@
 Here, You can set the amount of time taken for the event to be identified as inactive in both minutes and hours<img src="https://i.imgur.com/wqZPD1E.png"></p></li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_prK2" id="types-of-responses"></a>Types of responses<a class="hash-link" href="#types-of-responses" title="Direct link to heading">#</a></h3><p>There are three different ways to set up the bot response when a user is inactive</p><ol><li>Set up a nudge as a message</li><li>Set up the nudge followed by the question they dropped off at</li></ol><p><img src="https://i.imgur.com/Ko3xkH0.jpg"></p><p><img src="https://i.imgur.com/erG3UqL.png"></p><ol start="3"><li>Trigger a different flow to handle inactivity</li></ol><p><img src="https://i.imgur.com/BrzIHis.png"></p><ol start="4"><li>Activate for specific steps in a specific flow
 If we&#x27;re observing consistent dropoff at a specfic step, you can set up a unique event exclusively for that step.</li></ol><p>Eg: I want to handle a handle inactivity for email in a flow called &#x27;moreinfo&#x27;.</p><p><img src="https://i.imgur.com/leWMbX3.png">
 This will trigger the event exclusively for the email step and won&#x27;t be applicable globally.</p><p>If there are any specific use-cases around inactivity that you&#x27;d like to implement, raise it in our community and we&#x27;ll have the entire yellow ecosystem to help you out!!</p><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-undefined codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:#393A34;background-color:#f6f8fa"><div class="token-line" style="color:#393A34"><span class="token plain">You can find our community here: https://community.yellow.ai/</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><p>Happy bot building!!</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_2xL- thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#use-cases" class="table-of-contents__link">Use-cases</a></li><li><a href="#handling-inactivity" class="table-of-contents__link">Handling inactivity</a></li><li><a href="#setup" class="table-of-contents__link">Setup</a><ul><li><a href="#configure" class="table-of-contents__link">Configure</a></li><li><a href="#types-of-responses" class="table-of-contents__link">Types of responses</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="footer__bottom text--center"></div></div></footer></div>
-<script src="/styles.029d2b2d.js"></script>
-<script src="/runtime~main.90a440b0.js"></script>
-<script src="/main.bae1b80d.js"></script>
-<script src="/1.49225107.js"></script>
-<script src="/b1f81d43.80fe0da0.js"></script>
-<script src="/377.4d7f498f.js"></script>
-<script src="/935f2afb.526ee2f8.js"></script>
-<script src="/375.83b63a3c.js"></script>
-<script src="/9656d109.c849c738.js"></script>
+<script src="/styles.edef4358.js"></script>
+<script src="/runtime~main.57858f95.js"></script>
+<script src="/main.c0b6927f.js"></script>
+<script src="/1.cad42726.js"></script>
+<script src="/b1f81d43.c00b4450.js"></script>
+<script src="/378.c1f3cdf7.js"></script>
+<script src="/935f2afb.be9e5253.js"></script>
+<script src="/376.465e114f.js"></script>
+<script src="/9656d109.41ed8ee4.js"></script>
 </body>
 </html>
