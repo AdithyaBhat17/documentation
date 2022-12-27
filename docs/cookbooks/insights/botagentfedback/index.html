@@ -14,15 +14,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap">
 <script src="/js/FeedbackFooter.js"></script>
 <script src="/js/bot.js"></script><title data-react-helmet="true">Fetch CSAT(bot &amp; agent feedback) from bot users on data explorer | yellow.ai</title><meta data-react-helmet="true" property="og:image" content="https://docs.yellow.ai/img/og_img.png"><meta data-react-helmet="true" name="twitter:image" content="https://docs.yellow.ai/img/og_img.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for yellow.ai"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" property="og:title" content="Fetch CSAT(bot &amp; agent feedback) from bot users on data explorer | yellow.ai"><meta data-react-helmet="true" name="description" content="You can configure your flows and collect user feedback (Customer Satisfaction Score-CSAT) for bot interactions. This data will be available in the Data Explorer] section. You can visualize it further by taking advantage of [Dashboards and visualization."><meta data-react-helmet="true" property="og:description" content="You can configure your flows and collect user feedback (Customer Satisfaction Score-CSAT) for bot interactions. This data will be available in the Data Explorer] section. You can visualize it further by taking advantage of [Dashboards and visualization."><meta data-react-helmet="true" property="og:url" content="https://docs.yellow.ai/docs/cookbooks/insights/botagentfedback"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.png"><link data-react-helmet="true" rel="preconnect" href="https://LWOORM11IH-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://docs.yellow.ai/docs/cookbooks/insights/botagentfedback"><link rel="stylesheet" href="/styles.1e2dc4da.css">
-<link rel="preload" href="/styles.c505ad94.js" as="script">
-<link rel="preload" href="/runtime~main.904f439f.js" as="script">
-<link rel="preload" href="/main.cbed1a31.js" as="script">
-<link rel="preload" href="/1.20810b16.js" as="script">
-<link rel="preload" href="/b1f81d43.c2fc4b06.js" as="script">
-<link rel="preload" href="/389.82f1b573.js" as="script">
-<link rel="preload" href="/935f2afb.2584d9cf.js" as="script">
-<link rel="preload" href="/387.4b0bd8b3.js" as="script">
-<link rel="preload" href="/c3acdc93.6475a1cc.js" as="script">
+<link rel="preload" href="/styles.48b8ad1d.js" as="script">
+<link rel="preload" href="/runtime~main.94e47141.js" as="script">
+<link rel="preload" href="/main.61546e0c.js" as="script">
+<link rel="preload" href="/1.872a7ed6.js" as="script">
+<link rel="preload" href="/b1f81d43.dc441235.js" as="script">
+<link rel="preload" href="/390.a1db8ba4.js" as="script">
+<link rel="preload" href="/935f2afb.38f643c6.js" as="script">
+<link rel="preload" href="/388.00d70665.js" as="script">
+<link rel="preload" href="/c3acdc93.305a55ff.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -31,14 +31,14 @@
 This graph is available only for default tables - not custom tables.   </p></blockquote><img src="https://i.imgur.com/sMmYWUz.jpg" alt="drawing" width="50%"><hr><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_prK2" id="2-customize-collection-of-user-feedback"></a>2. Customize collection of user feedback <a class="hash-link" href="#2-customize-collection-of-user-feedback" title="Direct link to heading">#</a></h2><p>The above-mentioned default feedback method will work only on your website chatbot. 
 You can create flows in Studio to manually collect user feedback (from the bot interaction) for two use cases: </p><ol><li>Collect CSAT feedback for other channels like WhatsApp, Facebook, etc. after an inbox live agent interaction.</li><li>Customize your feedback parameters. The feedback node collects only the rating and comments from the user. If you want to collect other details, like &quot;which product would you likely recommend to your friends,&quot; you can use this method.</li></ol><p>Follow the given steps: </p><ol><li>Create a feedback flow.
 <img src="https://i.imgur.com/uE0Esxl.png"></li></ol><ul><li>You can add <a href="https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/prompt-nodes/" target="_blank" rel="noopener noreferrer">prompt nodes</a> to ask questions or other details and store the response in a variable. </li><li>To collect ratings, use a node to present options ranging from 1 to 5 (the CSAT score) and <strong>store the response</strong> in a variable (for example, feedback).If your channel is WhatsApp, you can use the <a href="https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/prompt-nodes#22-whatsapp-list" target="_blank" rel="noopener noreferrer">WhatsApp list node</a>. You can also use <a href="https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/prompt-nodes#14-quick-replies" target="_blank" rel="noopener noreferrer">Quick replies node</a> to fetch the user rating. </li></ul><p>    <img src="https://i.imgur.com/YUYBcyj.png" width="50%"></p><ol start="2"><li>Create a database with the required columns (for instructions, see <a href="https://docs.yellow.ai/docs/platform_concepts/studio/database" target="_blank" rel="noopener noreferrer">here</a>).</li></ol><p><img src="https://i.imgur.com/uQMNe3m.png"></p><ol start="3"><li>Send the collected data (feedback variables) into the database using the <a href="https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/action-nodes#23-database" target="_blank" rel="noopener noreferrer">database action node</a> in the bot flow.</li></ol><p><img src="https://i.imgur.com/1GbRjx2.png"></p><ol start="4"><li><p>Connect this feedback flow at the end of your use case (i.e., the other flow where the bot interaction is expected to end) using an <a href="https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/action-nodes#15-execute-flow" target="_blank" rel="noopener noreferrer">Execute Flow node</a>.</p></li><li><p>Open <strong>Insights</strong> &gt; <strong>Data Explorer</strong> &gt; <strong>Custom Tables</strong> &gt; Select the table in which you have stored the feedback.</p></li></ol><blockquote><p>Click <a href="https://docs.yellow.ai/docs/platform_concepts/growth/data-explorer#3-create-custom-tables" target="_blank" rel="noopener noreferrer">here</a> for detailed document on custom tables.</p></blockquote><p><img src="https://i.imgur.com/bkDSbfc.png"></p><ol start="6"><li>Create a <a href="https://docs.yellow.ai/docs/platform_concepts/growth/dashboards/" target="_blank" rel="noopener noreferrer">dashboard</a> and track it. Refresh the page to update dashboards with newly added data points.</li></ol><p><img src="https://i.imgur.com/wluH8KC.png"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/cookbooks/insights/eventdescriptions"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Event descriptions of default tables on data explorer</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/cookbooks/voice-as-channel/overview"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Voice overview »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_2xL- thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-track-user-feedback-on-the-default-table" class="table-of-contents__link">1. Track user feedback on the default table</a></li><li><a href="#2-customize-collection-of-user-feedback" class="table-of-contents__link">2. Customize collection of user feedback </a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="footer__bottom text--center"></div></div></footer></div>
-<script src="/styles.c505ad94.js"></script>
-<script src="/runtime~main.904f439f.js"></script>
-<script src="/main.cbed1a31.js"></script>
-<script src="/1.20810b16.js"></script>
-<script src="/b1f81d43.c2fc4b06.js"></script>
-<script src="/389.82f1b573.js"></script>
-<script src="/935f2afb.2584d9cf.js"></script>
-<script src="/387.4b0bd8b3.js"></script>
-<script src="/c3acdc93.6475a1cc.js"></script>
+<script src="/styles.48b8ad1d.js"></script>
+<script src="/runtime~main.94e47141.js"></script>
+<script src="/main.61546e0c.js"></script>
+<script src="/1.872a7ed6.js"></script>
+<script src="/b1f81d43.dc441235.js"></script>
+<script src="/390.a1db8ba4.js"></script>
+<script src="/935f2afb.38f643c6.js"></script>
+<script src="/388.00d70665.js"></script>
+<script src="/c3acdc93.305a55ff.js"></script>
 </body>
 </html>
