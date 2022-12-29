@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbenthos=self.webpackChunkbenthos||[]).push([[4121],{88070:function(a){a.exports=JSON.parse('[{"label":"whatsapp card","permalink":"/docs/tags/whatsapp-card","count":1},{"label":"carousel","permalink":"/docs/tags/carousel","count":1}]')}}]);
